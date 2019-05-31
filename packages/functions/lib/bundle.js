@@ -1,11 +1,18 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", { value: true });
-const functions = require("firebase-functions");
-const datastore_1 = require("@monorepo-tsx/datastore");
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var functions = require('firebase-functions');
+
+const TestModel = {
+  name: "Hello from monorepo"
+};
+
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
 //
-exports.helloWorld = functions.https.onRequest((request, response) => {
-    response.send(datastore_1.TestModel.name);
+const helloWorld = functions.https.onRequest((request, response) => {
+    response.send(TestModel.name);
 });
+
+exports.helloWorld = helloWorld;
