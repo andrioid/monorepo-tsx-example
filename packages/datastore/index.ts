@@ -1,3 +1,3 @@
 export const TestModel = {
-  name: "Hello"
+  name: "Hello from monorepo"
 };

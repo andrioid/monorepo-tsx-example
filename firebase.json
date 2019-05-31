@@ -1,0 +1,21 @@
+{
+  "functions": {
+    "source": "./packages/functions",
+    "predeploy": [
+      "echo wat $RESOURCE_DIR",
+      "yarn --cwd \"$RESOURCE_DIR\" run lint",
+      "yarn --cwd \"$RESOURCE_DIR\" run build",
+      "yarn --cwd \"$RESOURCE_DIR\" run bundle"
+    ]
+  },
+  "hosting": {
+    "public": "packages/crna/build",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
