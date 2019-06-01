@@ -2,6 +2,9 @@
 
 This repo serves as documentation for a proof-of-concept monorepo strategy when coding in TypeScript on the Firebase platform.
 
+## Purpose
+I struggled to find working code, that employed both create-react-app and Firebase functions. So, now there is.
+
 ## Features
 
 ### Yarn workspaces
